@@ -6,14 +6,14 @@
 
 <h2>Add a Machine</h2>
 
-<h4>Add a machine this engineer is permitted to fix: @Html.DisplayFor(model => model.Name)</h4>
+<h4>Add a machine @Html.DisplayFor(model => model.Name) is permitted to fix: </h4>
 
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.EngineerId)
 
-  @Html.Label("")
-  @Html.DropDownList("")
+  @Html.Label("Select Machine")
+  @Html.DropDownList("MachineId")
 
   <input type="submit" value="Save" />
 }
