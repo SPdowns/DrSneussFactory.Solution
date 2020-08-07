@@ -2,7 +2,7 @@
 
 namespace DrSneussFactory.Migrations
 {
-    public partial class SwitchMany2 : Migration
+    public partial class SwitchMany : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
