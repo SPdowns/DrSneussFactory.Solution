@@ -13,7 +13,6 @@ namespace DrSneussFactory.Models
     public int EngineerId { get; set; }
     public string Name { get; set; }
     public int JobTitle { get; set; }
-    public int MachineId { get; set; }
     public virtual ICollection<EngineerMachine> Machines { get; set; }
   }
 }
