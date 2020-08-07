@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@using DrSneussFactory.Models;
+@model DrSneussFactory.Models.Engineer;
+
+<h3>Engineer Details Page</h3>
+
+<h5>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h5>
+
+@if (@Model.Machines.Count == 0)
+{
+  <p>No Machines Patron Here Yet</p>
+}
+<ul>
+@foreach (Machine machine in @Model.Machines)
+{
+  <p>Machine Name: @Html.ActionLink($"{machine.MachineName}", "Details", "Machines",new { id = machine.MachineId})</p>
+}
+</ul>
+<button>@Html.ActionLink("Back to Engineer List", "Index")</button>
+<button>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId})</button>
+<button>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId})</button>
