@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using DrSneussFactory.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,8 +17,7 @@ namespace DrSneussFactory.Controllers
 
     public ActionResult Index()
     {
-      List<Engineer> model = _db.Engineers.ToList();
-      return View(model);
+      return View(_db.Engineers.ToList());
     }
 
     public ActionResult Create()
@@ -25,9 +25,13 @@ namespace DrSneussFactory.Controllers
       return View();
     }
     [HttpPost]
-    public ActionResult Create(Engineer engineer)
+    public ActionResult Create(Engineer engineer, int MachineId)
     {
       _db.Engineers.Add(engineer);
+      if (MachineId != 0)
+      {
+        _db.EngineerMachine.Add(new EngineerMachine() { MachineId = MachineId, EngineerId = engineer.EngineerId });
+      }
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
