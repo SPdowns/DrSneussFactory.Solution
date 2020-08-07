@@ -3,14 +3,16 @@ using System;
 using DrSneussFactory.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DrSneussFactory.Migrations
 {
     [DbContext(typeof(DrSneussFactoryContext))]
-    partial class DrSneussFactoryContextModelSnapshot : ModelSnapshot
+    [Migration("20200807195842_SwitchMany")]
+    partial class SwitchMany
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
