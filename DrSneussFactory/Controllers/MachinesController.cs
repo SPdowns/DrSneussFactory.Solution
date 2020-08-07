@@ -16,7 +16,7 @@ namespace DrSneussFactory.Controllers
 
     public ActionResult Index()
     {
-      List<Machine> model = _db.Items.ToList();
+      List<Machine> model = _db.Machines.ToList();
       return View(model);
     }
   }
