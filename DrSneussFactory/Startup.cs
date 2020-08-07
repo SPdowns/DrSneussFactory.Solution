@@ -25,7 +25,7 @@ namespace DrSneussFactory
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-        .AddDbContext<HairSalonContext>(options => options
+        .AddDbContext<DrSnuessFactoryContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
     }
 

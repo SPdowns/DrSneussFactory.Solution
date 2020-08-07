@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace DrSneussFactory.Models
 {
@@ -6,7 +7,7 @@ namespace DrSneussFactory.Models
   {
     public Engineer()
     {
-      this.Machines = new HashSet<Machine>();
+      this.Machines = new HashSet<EngineerMachine>();
     }
 
     public int EngineerId { get; set; }

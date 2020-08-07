@@ -15,7 +15,7 @@ namespace DrSneussFactory.Models
           .AddJsonFile("appsettings.json")
           .Build();
 
-      var builder = new DbContextOptionsBuilder<RegistrarContext>();
+      var builder = new DbContextOptionsBuilder<DrSneussFactoryContext>();
       var connectionString = configuration.GetConnectionString("DefaultConnection");
 
       builder.UseMySql(connectionString);
