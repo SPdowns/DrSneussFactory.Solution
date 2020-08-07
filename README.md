@@ -21,7 +21,7 @@
 * The following is the code snippet from the megan_hepner.sql file <br>
 * click _Start Import_
 * in your code editor create a .gitignore file and store the bin and obj folders in .gitignore
-* navigate to the HairSalon directory and type dotnet build in the command line to compile the code
+* navigate to the DrSnuessFactory directory and type dotnet build in the command line to compile the code
 * type dotnet run in the command line to run the program
 __
 
