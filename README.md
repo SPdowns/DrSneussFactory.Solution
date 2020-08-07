@@ -14,15 +14,11 @@
 
 ## **💻SETUP**
 * to clone this content, copy the url provided by the 'clone or download' button in GitHub
-* in command line use the command 'git clone (GitHub url)'
+* in command line run the command `git clone (GitHub url)`
 * open the program in a code editor
-* in MySql Workbench select _Data Import/Restore_ from the Administration tab
-* in import options select _Import from Self-Contained File_, and navigate to megan_hepner.sql in the root directory of this project
-* The following is the code snippet from the megan_hepner.sql file <br>
-* click _Start Import_
-* in your code editor create a .gitignore file and store the bin and obj folders in .gitignore
-* navigate to the DrSnuessFactory directory and type dotnet build in the command line to compile the code
-* type dotnet run in the command line to run the program
+* in the terminal, run the command `dotnet ef database update`
+* after successful migration, run the command `dotnet run`
+* in Chrome or Firefox, in the address bar type `localhost:5000` or `127.0.0.1:5000`
 __
 
 ## Specs
@@ -40,7 +36,7 @@ __
 
 ## Known Bugs
 
-_No known bugs_
+_Not able to have a splash page to show both engineers and thier machines or vice versa_
 
 ## **❤️Contributors**
 * Sean Downs
