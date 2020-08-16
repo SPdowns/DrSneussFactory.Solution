@@ -89,7 +89,7 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult AddEngineer(Engineer engineer, int MachineId)
+    public ActionResult AddEngineer(Engineer engineer, int? MachineId)
     {
       if (MachineId != 0)
       {
