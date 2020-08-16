@@ -7,9 +7,9 @@
 <h1>Machine Details<h1>
 <hr/>
 
-<h3>@Html.DisplayNameFor(model => model.MachineName): @Html.DisplayFor(model => model.MachineName)</h3>
+<h3>Machine: @Html.DisplayFor(model => model.MachineName)</h3>
 
-<h3>@Html.DisplayNameFor(model => model.MachineDescription): @Html.DisplayFor(model => model.MachineDescription)</h3><br>
+<h3>Machine Description: @Html.DisplayFor(model => model.MachineDescription)</h3><br>
 
 @if(@Model.Engineers.Count == 0)
 {
@@ -18,11 +18,10 @@
 else
 {
   <h2>Engineers permitted to fix:</h2>
-
   @foreach(var join in Model.Engineers)
   { 
     <p>@join.Engineer.Name</p>
-    @using (Html.BeginForm("DeleteMachine", "Machines"))
+    @using (Html.BeginForm("DeleteEngineer", "Machines"))
     {
       @Html.Hidden("joinId", @join.EngineerMachineId)
       <input type="submit" value="Delete"/>
@@ -31,7 +30,7 @@ else
 }
 
 <button>@Html.ActionLink("Add Engineer", "AddEngineer", new { id = Model.MachineId })</button>
-<button>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.MachineId })</button>
+<button>@Html.ActionLink("Delete Machine", "Delete", new { id = Model.MachineId })</button>
 <button>@Html.ActionLink("Edit Machine", "Edit", new { id = Model.MachineId })</button>
 <button>@Html.ActionLink("Back to list", "Index")</button>
 
